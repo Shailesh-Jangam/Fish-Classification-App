@@ -1,1 +1,122 @@
-# Fish-Classification-App
+
+# 🐠 Fish Species Image Classifier with DenseNet121
+
+This project is a deep learning-based image classification app that identifies 11 different fish species using Convolutional Neural Networks (CNNs) and transfer learning (DenseNet121). The model is deployed as a web application using **Streamlit**.
+
+---
+
+## 📌 Project Overview
+
+- 🎯 **Goal**: Predict fish species from images with high accuracy
+- 🧠 **Model**: DenseNet121 (pretrained on ImageNet)
+- 📷 **Data**: 11 fish categories, ~9.5k images (train/val/test)
+- 🌐 **Deployment**: Streamlit web app for real-time image classification
+
+---
+
+## 🗂️ Dataset Structure
+
+```
+Dataset/
+├── train/
+│   ├── class_1/
+│   ├── class_2/
+│   └── ...
+├── val/
+├── test/
+```
+
+- Total classes: 11 (e.g., trout, shrimp, red_mullet, etc.)
+- Imbalanced: One class had very few samples (`animal fish bass`)
+
+---
+
+## 🏗️ Project Structure
+
+```
+fish_classifier_app/
+├── app.py                 # Streamlit app
+├── densenet_model.h5      # Trained model
+├── utils.py               # Image preprocessing utilities
+├── requirements.txt       # Project dependencies
+└── README.md
+```
+
+---
+
+## 🔍 Model Summary
+
+| Model        | Accuracy | Notes                             |
+|--------------|----------|-----------------------------------|
+| Custom CNN   | 97%      | Good performance                  |
+| VGG16        | 95%      | Solid baseline                    |
+| ResNet50     | 31%      | Overfit or failed to converge     |
+| EfficientNet | 98%      | Excellent                         |
+| ✅ DenseNet121 | 98%      | Final model used for deployment   |
+
+---
+
+## 📊 Final Performance (DenseNet121)
+
+- ✅ **Accuracy**: 98%
+- 📈 High F1-score across almost all classes
+- ⚠️ Still struggles with the rare class: `animal fish bass`
+
+---
+
+## 🚀 Run the App Locally
+
+### 1️⃣ Clone the Repo
+```bash
+git clone https://github.com/yourusername/fish-classifier-app.git
+cd fish-classifier-app
+```
+
+### 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the App
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🖼️ Example Output
+
+- Upload a fish image
+- Get predicted class + confidence score
+- Image preview with label
+
+---
+
+## 📦 Requirements
+
+```
+tensorflow
+keras
+streamlit
+numpy
+opencv-python
+pillow
+scikit-learn
+matplotlib
+```
+
+---
+
+## 👨‍💻 Author
+
+**Shailesh Jangam**  
+🔗 [LinkedIn](https://linkedin.com/in/YOUR_PROFILE)  
+💻 [GitHub](https://github.com/YOUR_USERNAME)
+
+---
+
+## ⭐️ Acknowledgements
+
+- Transfer learning with DenseNet121 via Keras
+- Inspired by real-world fish classification challenges
+- Thanks to open-source community & dataset providers
