@@ -37,7 +37,6 @@ Dataset/
 fish_classifier_app/
 ├── app.py                 # Streamlit app
 ├── densenet_model.h5      # Trained model
-├── utils.py               # Image preprocessing utilities
 ├── requirements.txt       # Project dependencies
 └── README.md
 ```
@@ -51,7 +50,7 @@ fish_classifier_app/
 | Custom CNN   | 97%      | Good performance                  |
 | VGG16        | 95%      | Solid baseline                    |
 | ResNet50     | 31%      | Overfit or failed to converge     |
-| EfficientNet | 98%      | Excellent                         |
+| EfficientNet | 16%      | Very Low                         |
 | ✅ DenseNet121 | 98%      | Final model used for deployment   |
 
 ---
@@ -66,19 +65,13 @@ fish_classifier_app/
 
 ## 🚀 Run the App Locally
 
-### 1️⃣ Clone the Repo
-```bash
-git clone https://github.com/yourusername/fish-classifier-app.git
-cd fish-classifier-app
-```
-
 ### 2️⃣ Install Dependencies
-```bash
+```bash (prpmpt)
 pip install -r requirements.txt
 ```
 
 ### 3️⃣ Run the App
-```bash
+```bash (prompt)
 streamlit run app.py
 ```
 
@@ -110,8 +103,8 @@ matplotlib
 ## 👨‍💻 Author
 
 **Shailesh Jangam**  
-🔗 [LinkedIn](https://linkedin.com/in/YOUR_PROFILE)  
-💻 [GitHub](https://github.com/YOUR_USERNAME)
+🔗 [LinkedIn](https://linkedin.com/in/shailesh-jangam)  
+💻 [GitHub](https://github.com/shailesh-jangam)
 
 ---
 
@@ -119,4 +112,4 @@ matplotlib
 
 - Transfer learning with DenseNet121 via Keras
 - Inspired by real-world fish classification challenges
-- Thanks to open-source community & dataset providers
+- Thanks to LabMentix, the dataset providers
